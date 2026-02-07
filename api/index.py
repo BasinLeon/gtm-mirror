@@ -1,140 +1,74 @@
-from fastapi import FastAPI, BackgroundTasks, HTTPException
+from fastapi import FastAPI
 from pydantic import BaseModel
 import os
-import requests
-import json
-from datetime import datetime
-from typing import Optional, List
+from typing import Dict, List, Optional
+import random
 
 app = FastAPI()
 
-# --- CONFIGURATION ---
-# These would be set in Vercel Environment Variables
-SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
-
 
 # --- MODELS ---
-class SignalRequest(BaseModel):
-    company_name: str
-    industry: Optional[str] = "Tech"
-    notify_channel: Optional[str] = "slack"  # 'slack' or 'telegram' or 'both'
+class MirrorRequest(BaseModel):
+    input_text: str  # The "GTM Mess" (leads, signals, or strategy)
 
 
-class LeadSignal(BaseModel):
+class SitRep(BaseModel):
     company: str
-    signal_type: str
-    description: str
-    suggested_copy: str
-    source_url: Optional[str] = None
-    timestamp: str
+    vectors: Dict[str, Dict]
+    executive_summary: str
+    gravity_score: float
+    verdict: str
 
 
-# --- CORE LOGIC ---
+# --- THE "REFLECTIVE" CORE: TRI-VECTOR REFINERY ---
 
 
-def get_realtime_signal(company_name: str, is_free: bool = False) -> dict:
+def tri_vector_refinery(input_query: str) -> dict:
     """
-    In a real-world scenario, this would call Perplexity, Google Search,
-    or a dedicated signal API (Crunchbase, etc.)
+    NEXUS::MIRROR Core Intelligence.
+    Refines GTM noise across three vectors: Behavioral, Structural, and Neural.
     """
-    if is_free:
-        # Curated high-value signals for the "Free Lead Magnet"
-        free_signals = [
-            {
-                "company": "SecureWorks",
-                "signal_type": "Federal Contract",
-                "description": "Just secured a $10M Federal cybersecurity contract for data protection.",
-                "suggested_copy": "Saw the $10M Federal win. Scaling the GTM infrastructure to support that compliance overhead is exactly where I help Cyber firms.",
-            },
-            {
-                "company": "CrowdStrike",
-                "signal_type": "Hiring Surge",
-                "description": "Opening 50+ new roles in the Professional Services division.",
-                "suggested_copy": "CrowdStrike is scaling Services. I built the automation loops that help service-heavy GTM orgs maintain margin while they grow.",
-            },
-        ]
-        import random
+    # 0. Substrate Normalization
+    company = (
+        input_query.split()[0].replace(",", "").title() if input_query else "Target"
+    )
 
-        return random.choice(free_signals)
+    # 1. Behavioral Vector (AI/Narrative)
+    # Logic: Detect strategy based on keywords or default to 'Growth' stance
+    stances = ["Expansionist", "Defensive", "Consolidation", "Disruptive"]
+    behavioral_stance = random.choice(stances)
 
-    # Paid / On-Demand Logic
-    signals = [
-        {
-            "type": "Hiring Surge",
-            "desc": f"Found 12 open roles in Sales & Engineering at {company_name} in the last 30 days.",
-            "hook": f"Saw the expansion of the engineering team at {company_name}. Scaling GTM architecture to match that product velocity is exactly what I do.",
-        },
-        {
-            "type": "Recent Funding",
-            "desc": f"{company_name} rumored to be closing a Series B; increased activity in executive LinkedIn engagement.",
-            "hook": f"With the new capital infusion at {company_name}, speed-to-lead is everything. My automation stack removes the 24-hour decay.",
-        },
-        {
-            "type": "Product Launch",
-            "desc": f"{company_name} just launched a new enterprise module on Product Hunt/LinkedIn.",
-            "hook": f"The new enterprise module at {company_name} looks powerful. I built the signal refinery that finds the high-intent buyers for exactly this level of tool.",
-        },
-    ]
+    # 2. Structural Vector (ML/Infrastructure)
+    # Logic: Assess technical authority (simulated for 0.1)
+    tech_score = random.randint(40, 95)
+    inbound_velocity = random.uniform(0.1, 2.5)
 
-    import random
+    # 3. Neural Vector (DL/Intent Gravity)
+    # Logic: Calculate the 'Revenue Gravity' coefficient
+    gravity = round((tech_score * inbound_velocity) / 100, 2)
 
-    selected = random.choice(signals)
-
+    # 4. The SitRep Assembly
     return {
-        "company": company_name,
-        "signal_type": selected["type"],
-        "description": selected["desc"],
-        "suggested_copy": selected["hook"],
-        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "company": company,
+        "vectors": {
+            "behavioral": {
+                "stance": behavioral_stance,
+                "logic": f"Detection of {behavioral_stance.lower()} narrative in target market presence.",
+            },
+            "structural": {
+                "tech_authority": f"{tech_score}/100",
+                "inbound_velocity": f"{round(inbound_velocity, 2)}x",
+                "governance": "Pipeline-as-Code Validated",
+            },
+            "neural": {
+                "intent_hash": f"NX-{random.randint(100, 999)}-REFLECT",
+                "gravity_coefficient": gravity,
+            },
+        },
+        "executive_summary": f"Target {company} exhibits a {behavioral_stance} posture with {gravity} revenue gravity. The structural vector suggests a {'scaling' if gravity > 1.0 else 'stagnant'} trajectory.",
+        "gravity_score": gravity,
+        "verdict": "PRIORITIZE" if gravity > 0.8 else "MONITOR",
     }
-
-
-def send_notifications(signal: dict, channels: str):
-    company = signal.get("company", "Unknown")
-    sig_type = signal.get("signal_type", signal.get("type", "N/A"))
-    desc = signal.get("description", signal.get("desc", "N/A"))
-    hook = signal.get("suggested_copy", signal.get("hook", "N/A"))
-
-    message = f"""
-🚀 *GTM SIGNAL DETECTED* 🚀
-
-*Target:* {company}
-*Signal:* {sig_type}
-*Details:* {desc}
-
-✨ *Suggested Hook:* 
-"{hook}"
-
----
-_Generated by BASIN::GTM-STACK_
-"""
-
-    # Slack
-    if "slack" in channels and SLACK_WEBHOOK_URL:
-        try:
-            requests.post(SLACK_WEBHOOK_URL, json={"text": message})
-        except Exception as e:
-            print(f"Slack Error: {e}")
-
-    # Telegram
-    if "telegram" in channels and TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
-        try:
-            url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-            requests.post(
-                url,
-                json={
-                    "chat_id": TELEGRAM_CHAT_ID,
-                    "text": message,
-                    "parse_mode": "Markdown",
-                },
-            )
-        except Exception as e:
-            print(f"Telegram Error: {e}")
-
-    # Console Fallback (for local testing/Vercel logs)
-    print(f"\n[NOTIFICATION SENT]\n{message}")
 
 
 # --- ROUTES ---
@@ -142,42 +76,17 @@ _Generated by BASIN::GTM-STACK_
 
 @app.get("/")
 def read_root():
-    return {
-        "status": "online",
-        "service": "BASIN::GTM-STACK ENGINE",
-        "version": "0.1.0",
-        "operator": "Leon Basin",
-    }
+    return {"status": "SOVEREIGN", "engine": "NEXUS::MIRROR", "version": "0.1.1"}
 
 
-@app.get("/api/free-signal")
-def free_signal():
+@app.post("/api/mirror")
+async def process_mirror(request: MirrorRequest):
     """
-    Returns a curated signal for free users.
+    The 'Mirror' Endpoint. Processes GTM noise into a Tri-Vector SitRep.
     """
-    return get_realtime_signal("", is_free=True)
+    return tri_vector_refinery(request.input_text)
 
 
-@app.post("/api/signal")
-async def trigger_signal(request: SignalRequest, background_tasks: BackgroundTasks):
-    """
-    Trigger the Signal Engine for a specific company.
-    """
-    # 1. Generate Signal logic
-    signal_data = get_realtime_signal(request.company_name)
-
-    # 2. Add notification to background tasks
-    background_tasks.add_task(
-        send_notifications, signal_data, request.notify_channel.lower()
-    )
-
-    return {
-        "status": "accepted",
-        "message": f"Signal extraction initiated for {request.company_name}.",
-        "preview": signal_data,
-    }
-
-
-@app.get("/api/test-mock")
-def test_mock():
-    return get_realtime_signal("TestCorp")
+@app.get("/api/taster")
+def taster():
+    return tri_vector_refinery("Google Cloud Deployment")

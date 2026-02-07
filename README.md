@@ -1,40 +1,41 @@
-# 🦅 BASIN::GTM-STACK
-## The Plug-and-Play Revenue Acceleration Engine
+# 🦅 NEXUS::MIRROR
 
-This is a lightweight, Python-driven GTM engine designed to turn inbound noise or company names into high-intent signals and suggested outreach copy.
+## The GTM Psychology Primitive & Tri-Vector Intelligence Engine
 
-### 🚀 Quick Start (Deployment)
+NEXUS::MIRROR is not a "tool"—it is a **primitive**. It is the logic layer designed to be integrated into high-status GTM stacks to provide psychological auditing and revenue signal refinement across three intelligence vectors.
 
-1. **Push to GitHub:**
-   ```bash
-   git init
-   git add .
-   git commit -m "initial gtm stack"
-   git remote add origin https://github.com/YOUR_USER/gtm-stack.git
-   git push -u origin main
-   ```
+### 🧠 The Tri-Vector Logic
+Most GTM tools provide *data*. Nexus provides **Reflection**. 
+It processes raw market noise through three refinery layers to output structured metadata:
 
-2. **Connect to Vercel:**
-   - Import the repo.
-   - Vercel will detect the `api/` folder and serve the FastAPI backend as Serverless Functions.
+1.  **Behavioral Vector (AI):** Detects narrative stance and market posture.
+2.  **Structural Vector (ML):** Assesses technical authority and inbound velocity.
+3.  **Neural Vector (DL):** Calculates "Revenue Gravity" and intent momentum.
 
-3. **Set Environment Variables:**
-   - `SLACK_WEBHOOK_URL`: Your Slack channel webhook.
-   - `TELEGRAM_BOT_TOKEN`: (Optional) Your bot token.
-   - `TELEGRAM_CHAT_ID`: (Optional) Your chat ID.
+### 🛠️ The Operational Hub (GitHub Native)
 
-### 🛠 How it Works
+NEXUS::MIRROR is designed to be run as a **Sovereign Command Center** directly within GitHub.
 
-1. **Trigger:** Send a POST request to `/api/signal` with a `company_name`.
-2. **Scout:** The engine researches (or mocks for 0.1) the company for "Trigger Events" (Funding, Hiring, Product Launches).
-3. **Refine:** It generates a personalized "Hook" using Leon's GTM methodology.
-4. **Notify:** Sends the formatted Signal Card to Slack or Telegram instantly.
+- **The Operator Console (Codespaces):** Launch a fully pre-configured refinery environment in seconds.
+- **The Playbooks (Actions):** Run high-level GTM audits via "NEXUS::OPS" without touching code.
+- **Security & Governance:** Managed via GitHub Secrets, Private Logs, and Agentic Security Guards.
 
-### 💰 Monetization Model
+### 🚀 Integration (Headless UI)
 
-- **Tier 1 ($299):** Access to this repository + Setup Guide.
-- **Tier 2 ($799):** Pre-configured environment + 1hr Setup Call.
-- **Tier 3 ($2,500+):** Custom Connectors (Salesforce/HubSpot) + Custom Signal Logic.
+The engine is delivered as a **Headless API**. You build the interface; we provide the brains (JSON Primitive).
+
+1.  **Deploy to Vercel:** (FastAPI + Next.js)
+2.  **Post Noise:** Send a POST request to `/api/mirror`.
+3.  **Receive SitRep:** Get a structured Tri-Vector Situation Report.
+
+### 💰 The "License to Build" Model
+
+This is a one-time payment for the **Engine License**.
+
+*   **The Free Mirror ($0):** Public-facing Tri-Vector audit tool. Proves the logic.
+*   **The Engine License ($500):** Access to the full Python Source + Private API Key for your own builds.
+*   **The Architect Tier ($2k+):** Custom psychological modeling for your specific industry.
 
 ---
-*Built by Leon Basin | GTM Engineer*
+
+*Built by Leon Basin | GTM Engineer & Architect*

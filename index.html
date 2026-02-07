@@ -3,224 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTM-STACK | Revenue Acceleration Engine</title>
+    <title>NEXUS::MIRROR | GTM Primitive</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #D4AF37;
-            --gold-light: #F5E6A3;
-            --bg-deep: #050508;
-            --bg-card: #0D0D12;
+        body { 
+            background: #050505; 
+            color: #888; 
+            font-family: 'JetBrains Mono', monospace; 
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        body { background: var(--bg-deep); color: #f0e6d3; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .font-orbitron { font-family: 'Orbitron', sans-serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-        
-        .gold-glow { text-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
-        .gold-border { border: 1px solid rgba(212, 175, 55, 0.2); }
-        
-        .premium-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 12px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        .premium-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.2);
-        }
-        
-        .btn-gold {
-            background: linear-gradient(135deg, var(--gold) 0%, #8A6D3B 100%);
-            color: #050508;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            letter-spacing: 0.1em;
+        .terminal-glow { text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+        .nexus-input {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: #f0e6d3;
             transition: all 0.3s ease;
         }
-        .btn-gold:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        .nexus-input:focus {
+            border-color: #D4AF37;
+            outline: none;
+            background: rgba(255, 255, 255, 0.04);
         }
+        .gold-accent { color: #D4AF37; }
+        .bg-gold { background: #D4AF37; }
         
-        .scanning-bar {
-            height: 2px;
-            background: var(--gold);
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            animation: scan 3s linear infinite;
-            opacity: 0.3;
-        }
-        @keyframes scan {
-            0% { top: 0; }
-            100% { top: 100%; }
-        }
-
-        #signal-display {
-            display: none;
-            animation: fadeIn 0.5s ease-out;
-        }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        
+        .logic-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .logic-card:hover { border-color: rgba(212, 175, 55, 0.3); }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #222; }
     </style>
 </head>
-<body class="selection:bg-gold selection:text-black">
+<body class="p-6 md:p-12">
 
-    <!-- Header / Nav -->
-    <nav class="flex justify-between items-center px-10 py-6 border-b border-white/5 backdrop-blur-md sticky top-0 z-50">
-        <div class="font-orbitron font-black text-xl tracking-tighter text-white">GTM<span class="text-gold">::</span>STACK</div>
-        <div class="flex gap-8 font-mono text-[10px] uppercase tracking-widest text-slate-400">
-            <a href="#features" class="hover:text-gold transition-colors">Features</a>
-            <a href="#pricing" class="hover:text-gold transition-colors">Pricing</a>
-            <a href="#" class="text-gold">Launch 0.1</a>
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-12">
+        <div class="text-[10px] tracking-[0.5em] uppercase text-white font-bold">
+            NEXUS<span class="gold-accent">::</span>MIRROR <span class="text-[8px] opacity-30 font-light">PROTOTYPE_v0.1.1</span>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <main class="max-w-6xl mx-auto px-6 py-24 text-center">
-        <div class="font-mono text-[10px] uppercase tracking-[0.5em] text-gold mb-4 opacity-70">Sovereign Revenue Infrastructure</div>
-        <h1 class="font-orbitron text-6xl md:text-8xl font-black tracking-tighter uppercase mb-6 leading-none">
-            Systems over <br> <span class="text-gold gold-glow">Headcount</span>
-        </h1>
-        <p class="text-slate-400 max-w-2xl mx-auto text-lg mb-12 font-light leading-relaxed italic">
-            "Your sales team doesn't need more leads. They need more leverage. <br> I build the Python-driven engines that find the revenue noise and turn it into signal."
-        </p>
-
-        <!-- Live Demo Hook -->
-        <div class="premium-card max-w-3xl mx-auto p-12 text-left relative">
-            <div class="scanning-bar"></div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div>
-                    <h3 class="font-orbitron text-xl font-bold mb-2">Free Signal Taster</h3>
-                    <p class="text-slate-500 text-xs font-mono">Real-time GTM signal extraction from the 0.1 refinery.</p>
-                </div>
-                <button onclick="fetchSignal()" id="demo-btn" class="btn-gold px-8 py-4 rounded-full text-xs uppercase whitespace-nowrap">
-                    Extract Live Signal
-                </button>
-            </div>
-
-            <!-- Signal Output Area -->
-            <div id="signal-display" class="mt-8 pt-8 border-t border-white/10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <div class="text-[9px] font-mono text-gold uppercase tracking-[0.3em] mb-2">Target Entity</div>
-                        <div id="signal-company" class="text-2xl font-bold text-white mb-4">--</div>
-                        <div class="text-[9px] font-mono text-gold uppercase tracking-[0.3em] mb-2">Signal Detected</div>
-                        <div id="signal-type" class="text-lg font-bold text-slate-300">--</div>
-                    </div>
-                    <div class="bg-black/40 p-6 rounded-lg border border-white/5">
-                        <div class="text-[9px] font-mono text-gold uppercase tracking-[0.3em] mb-4">Suggested Hook</div>
-                        <p id="signal-hook" class="text-sm italic text-slate-400 leading-relaxed italic">
-                            "--"
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="text-[8px] uppercase tracking-widest opacity-40">
+            SOVEREIGN_REVENUE_ENGINE
         </div>
+    </header>
+
+    <!-- Main Console -->
+    <main class="flex-grow flex flex-col max-w-5xl mx-auto w-full">
         
-        <script>
-            async function fetchSignal() {
-                const btn = document.getElementById('demo-btn');
-                const display = document.getElementById('signal-display');
-                
-                btn.innerText = 'REFINING...';
-                btn.disabled = true;
+        <div class="mb-12">
+            <h1 class="text-white text-xl md:text-2xl font-light mb-4 terminal-glow uppercase tracking-tighter">
+                Extract the <span class="gold-accent">Tri-Vector SitRep</span>.
+            </h1>
+            <p class="text-[10px] leading-relaxed max-w-xl opacity-60 uppercase tracking-widest">
+                Mirror the GTM noise. Output the psychological primitive.
+            </p>
+        </div>
 
-                try {
-                    const response = await fetch('/api/free-signal');
-                    const data = await response.json();
-                    
-                    document.getElementById('signal-company').innerText = data.company;
-                    document.getElementById('signal-type').innerText = data.signal_type;
-                    document.getElementById('signal-hook').innerText = `"${data.suggested_copy}"`;
-                    
-                    display.style.display = 'block';
-                    btn.innerText = 'EXTRACT AGAIN';
-                    btn.disabled = false;
-                } catch (e) {
-                    console.error(e);
-                    btn.innerText = 'ERROR (Check API)';
-                    btn.disabled = false;
-                }
-            }
-        </script>
+        <!-- Input Area -->
+        <div class="relative group mb-12">
+            <textarea 
+                id="mirror-input"
+                class="nexus-input w-full h-32 p-6 text-sm rounded-lg resize-none"
+                placeholder="PROJECTION: Paste lead lists, signals, or raw mess here..."
+            ></textarea>
+            <button 
+                onclick="reflect()"
+                id="reflect-btn"
+                class="absolute bottom-4 right-4 bg-white hover:bg-gold text-black px-6 py-2 text-[10px] uppercase font-bold tracking-widest rounded-md transition-all"
+            >
+                Reflect Noise
+            </button>
+        </div>
+
+        <!-- The Mirror: Tri-Vector Display -->
+        <div id="mirror-output" class="hidden flex-grow border-t border-white/5 pt-12 fade-in">
+            <!-- Verdict Banner -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] mb-2 gold-accent">SITREP Verdict</div>
+                    <div id="verdict-label" class="text-5xl font-bold text-white tracking-tighter">--</div>
+                    <div id="company-name" class="text-xs uppercase opacity-40 mt-1 tracking-widest">--</div>
+                </div>
+                <div class="text-right">
+                    <div class="text-[9px] uppercase tracking-[0.3em] mb-2 gold-accent">Revenue Gravity</div>
+                    <div id="gravity-score" class="text-5xl font-bold text-white tracking-tighter">0.0</div>
+                </div>
+            </div>
+
+            <!-- The Tri-Vector Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Behavioral -->
+                <div class="logic-card">
+                    <div class="text-[8px] uppercase tracking-widest opacity-40 mb-4">Vector 01: Behavioral</div>
+                    <div id="behavioral-stance" class="text-lg text-white font-bold mb-2">--</div>
+                    <p id="behavioral-logic" class="text-[10px] leading-relaxed opacity-60">--</p>
+                </div>
+                <!-- Structural -->
+                <div class="logic-card border-l-2 border-l-gold/20">
+                    <div class="text-[8px] uppercase tracking-widest opacity-40 mb-4">Vector 02: Structural</div>
+                    <div id="structural-tech" class="text-lg text-white font-bold mb-2">--</div>
+                    <div id="structural-velocity" class="text-[10px] text-gold font-bold mb-2 tracking-widest">--</div>
+                    <p class="text-[10px] leading-relaxed opacity-60 italic">"Pipeline-as-Code Validated"</p>
+                </div>
+                <!-- Neural -->
+                <div class="logic-card">
+                    <div class="text-[8px] uppercase tracking-widest opacity-40 mb-4">Vector 03: Neural</div>
+                    <div id="neural-hash" class="text-[10px] font-mono text-gold mb-2">--</div>
+                    <div class="text-[8px] uppercase tracking-widest opacity-40 mb-1">Intent Momentum</div>
+                    <div id="neural-momentum" class="text-lg text-white font-bold">--</div>
+                </div>
+            </div>
+
+            <!-- Executive Summary -->
+            <div class="bg-white/5 p-8 rounded-lg border border-white/10">
+                <div class="text-[9px] uppercase tracking-[0.3em] mb-4 gold-accent">Executive Reflection</div>
+                <p id="executive-summary" class="text-sm font-light leading-relaxed text-slate-300 italic">
+                    "--"
+                </p>
+            </div>
+            
+            <!-- JSON Toggle for Builders -->
+            <div class="mt-8 text-right">
+                <button onclick="toggleJSON()" class="text-[9px] uppercase tracking-widest opacity-20 hover:opacity-100 transition-opacity">
+                    [View Primitive JSON]
+                </button>
+                <pre id="json-primitive" class="hidden text-left mt-4 p-4 bg-black text-[10px] text-slate-500 overflow-x-auto"></pre>
+            </div>
+        </div>
     </main>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 bg-black/30 border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-orbitron text-3xl font-bold mb-4">Selection Tiering</h2>
-                <div class="h-1 w-20 bg-gold mx-auto"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tier 1 -->
-                <div class="premium-card p-10 flex flex-col justify-between">
-                    <div>
-                        <div class="font-mono text-[9px] text-slate-500 uppercase mb-4">01 // The Blueprint</div>
-                        <div class="text-4xl font-orbitron font-black mb-6">$199 <span class="text-xs text-slate-600">/ One-Time</span></div>
-                        <ul class="text-xs text-slate-400 space-y-4 font-light">
-                            <li><span class="text-gold">✓</span> Core Python Scripts Source</li>
-                            <li><span class="text-gold">✓</span> Signal-to-Notice Logic</li>
-                            <li><span class="text-gold">✓</span> Vercel Deployment Guide</li>
-                            <li><span class="text-gold">✓</span> Self-Service Access</li>
-                        </ul>
-                    </div>
-                    <button class="mt-8 border border-white/10 py-4 font-mono text-[9px] uppercase tracking-widest hover:border-gold transition-colors">Select Blueprint</button>
-                </div>
-
-                <!-- Tier 2 - Featured -->
-                <div class="premium-card p-10 border-gold shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)] flex flex-col justify-between relative">
-                    <div class="absolute top-4 right-4 bg-gold text-black px-3 py-1 text-[8px] font-bold uppercase rounded">Operator Choice</div>
-                    <div>
-                        <div class="font-mono text-[9px] text-gold uppercase mb-4">02 // The Operator</div>
-                        <div class="text-4xl font-orbitron font-black mb-6">$799 <span class="text-xs text-slate-600">/ One-Time</span></div>
-                        <ul class="text-xs text-white space-y-4 font-medium">
-                            <li><span class="text-gold">✓</span> Everything in Blueprint</li>
-                            <li><span class="text-gold">✓</span> Pre-configured Environment</li>
-                            <li><span class="text-gold">✓</span> 1hr White-Glove Setup Call</li>
-                            <li><span class="text-gold">✓</span> 5 Pre-built Connectors</li>
-                        </ul>
-                    </div>
-                    <button class="mt-8 btn-gold py-4 rounded-lg text-[9px] uppercase tracking-widest">Deploy as Operator</button>
-                </div>
-
-                <!-- Tier 3 -->
-                <div class="premium-card p-10 flex flex-col justify-between">
-                    <div>
-                        <div class="font-mono text-[9px] text-slate-500 uppercase mb-4">03 // Strategic</div>
-                        <div class="text-4xl font-orbitron font-black mb-6">$2,500+</div>
-                        <ul class="text-xs text-slate-400 space-y-4 font-light">
-                            <li><span class="text-gold">✓</span> Custom Signal Architecture</li>
-                            <li><span class="text-gold">✓</span> CRM Deep Integration</li>
-                            <li><span class="text-gold">✓</span> Strategic GTM Audit</li>
-                            <li><span class="text-gold">✓</span> Dedicated Pipeline Support</li>
-                        </ul>
-                    </div>
-                    <button class="mt-8 border border-white/10 py-4 font-mono text-[9px] uppercase tracking-widest hover:border-gold transition-colors">Contact Expert</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 text-center px-6">
-        <div class="font-mono text-[8px] text-slate-600 uppercase tracking-[0.5em] mb-4">
-            Built by Leon Basin // GTM Engineer & Architect
+    <footer class="mt-12 flex justify-between items-end border-t border-white/5 pt-6">
+        <div class="text-[8px] font-mono opacity-20 uppercase tracking-[0.5em]">
+            SYSTEMS_OVER_HEADCOUNT
         </div>
-        <div class="text-slate-700 text-[10px] font-mono">
-            © 2026 BASIN & ASSOCIATES 🌍 // REVENUE GRAVITY
+        <div class="flex gap-6 text-[9px] font-mono">
+            <a href="#" class="hover:text-gold transition-colors">API_DOCS</a>
+            <a href="#" class="text-gold font-bold">BUY ENGINE ($500)</a>
         </div>
     </footer>
 
+    <script>
+        function toggleJSON() {
+            const el = document.getElementById('json-primitive');
+            el.classList.toggle('hidden');
+        }
+
+        async function reflect() {
+            const input = document.getElementById('mirror-input');
+            const btn = document.getElementById('reflect-btn');
+            const output = document.getElementById('mirror-output');
+            
+            if (!input.value.trim()) return;
+
+            btn.innerText = 'REFINING...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/api/mirror', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ input_text: input.value })
+                });
+                
+                const data = await response.json();
+                
+                // Populate Mirror
+                document.getElementById('company-name').innerText = data.company;
+                document.getElementById('verdict-label').innerText = data.verdict;
+                document.getElementById('gravity-score').innerText = data.gravity_score;
+                
+                document.getElementById('behavioral-stance').innerText = data.vectors.behavioral.stance;
+                document.getElementById('behavioral-logic').innerText = data.vectors.behavioral.logic;
+                
+                document.getElementById('structural-tech').innerText = `Authority: ${data.vectors.structural.tech_authority}`;
+                document.getElementById('structural-velocity').innerText = `Velocity: ${data.vectors.structural.inbound_velocity}`;
+                
+                document.getElementById('neural-hash').innerText = data.vectors.neural.intent_hash;
+                document.getElementById('neural-momentum').innerText = `${data.gravity_score}x G-Force`;
+                
+                document.getElementById('executive-summary').innerText = `"${data.executive_summary}"`;
+                document.getElementById('json-primitive').innerText = JSON.stringify(data, null, 4);
+                
+                // Show Mirror
+                output.classList.remove('hidden');
+                btn.innerText = 'REFLECT NOISE';
+                btn.disabled = false;
+                
+                output.scrollIntoView({ behavior: 'smooth' });
+                
+            } catch (e) {
+                console.error(e);
+                btn.innerText = 'REFRACT_ERROR';
+                btn.disabled = false;
+            }
+        }
+    </script>
 </body>
 </html>
