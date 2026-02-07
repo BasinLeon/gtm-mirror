@@ -1,28 +1,31 @@
-# 🦅 THE SHADOW DISTRIBUTION PLAYBOOK
-## Establishing Aura through Schema Sniping
+# 🦅 THE 30-DAY SURGICAL STRIKE
+## Distribution via the "Gift of Clarity"
 
-Distribution is the engine; Rigor is the fuel. We bypass the lobby and enter the engine room.
+To clear your first $500, we shift from labor to logic. We use **Shadow Distribution** to establish technical authority before the first call.
 
-### 1. The "Gift of Clarity" (Day 1-7)
-Don't ask for a meeting. Deliver a **Diagnostic Artifact**.
-- **Action:** Run a target company through the `run_audit` command.
-- **The Delivery:** Send a screenshot of the **JSON Primitive** to the Founding Engineer or RevOps Lead.
-- **The Move:** "You're hiring RevOps because you feel a lag. My refinery found a **0.12 Neural Gravity** score. You have a Market Lag vulnerability. Here is the schema to fix it."
+### 📅 The 30-Day Timeline
 
-### 2. Schema Sniping on X / Communities
-Builders don't want claps; they want **Inputs**.
-- **The Hook:** "GTM is a data latency problem. Stop scoring page visits; start scoring postural momentum."
-- **The visual:** Share the **Intent Hash** (e.g., `NX-209-REFLECT`) and the Tri-Vector logic.
-- **The Pull:** "I've turned my refinery into a living dependency. Run your mess through the Mirror: [Your Link]."
+#### Week 1: Pipe Setup (The Substrate)
+- **Goal:** Connect a payment link (Stripe/Lemon Squeezy) to your domain. 
+- **Action:** Ensure the **NEXUS::MIRROR** v0.1.1 is live on Vercel and accessible via API.
 
-### 3. Price the Transformation
-Shift the conversation from "Price" to "Hires Avoided."
-- **Anchor:** "You could hire 2 more SDRs to churn through noise, or you could license the **Operator Tier ($799)** to filter the noise out before it hits your CRM."
+#### Week 2: The "Aha!" Demo (Validation)
+- **Goal:** Document the transformation.
+- **Action:** Record a 2-minute Loom of the engine running a reflection on a live domain. Show the JSON output. Prove the "Magic."
 
-### 4. Moltbook: The Agent Frontier
-Deploy the **NEXUS::MIRROR** agent to `m/agents`.
-- **Strategy:** Provide logic-driven reflections on trending startups. 
-- **Goal:** Become the "Standard Dependency" for agentic revenue flows.
+#### Week 3: Aura Proof (Seeding)
+- **Goal:** Signal Technical Authority.
+- **Action:** Post JSON snippets and "Reflections" to X and RevOps communities. Use the verified **Intent Hash** (e.g., `NX-209-REFLECT`).
+
+#### Week 4: The Close (Surgical Strike)
+- **Goal:** Convert Builders into Licensees.
+- **Action:** Send 5 gifted **SITREPs** to high-value targets (Founding Engineers / VPs). 
+- **The Move:** "I've diagnosed a **0.12 Neural Gravity** vulnerability in your stack. Here's the schema to fix it."
+
+### 🎯 The "Shadow Strike" Plays
+- **Lead Triage Engine:** Target VPs of Sales to stop lead decay.
+- **Auto-Enrichment Briefs:** Target SDR Managers to increase meeting quality.
+- **Speed-to-Lead:** Target Founders to recover "sleeping money."
 
 ---
-*Execution is the only differentiator.*
+*Distribution is the Engine. Rigor is the Fuel.*

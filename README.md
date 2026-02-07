@@ -1,28 +1,35 @@
 # 🦅 NEXUS::MIRROR
-## The GTM Psychology Primitive & Revenue Intelligence Engine
+## The Sovereign GTM Primitive: From Code to Cash
 
-NEXUS::MIRROR is not a "tool"—it is **Oxygen**. It is the logic layer designed for **Sovereign Operators** to audit market noise and refine it into a programmable primitive.
+**NEXUS::MIRROR** is a Revenue OS—a sovereign primitive that transforms market noise into high-intent intelligence. We don't build tools; we establish **Revenue Gravity**.
 
-### 🧠 The Refinery (Tri-Vector Hub)
-Stop building dashboards. Start building dependence. The engine processes messy market noise through three intelligence layers:
+### 🧠 The Refinery (Logic-as-a-Service)
+Stop building for "claps" and start building for **dependence**. The engine processes messy market noise through three intelligence layers:
 
-1.  **Behavioral Stance:** Detecting if a target is expansionist or defensive.
-2.  **Structural Authority:** Measuring technical velocity and market resonance.
-3.  **Neural Gravity:** Calculating the **Intent Momentum Coefficient**. 
-    *   *Strategic Note:* A **0.12 score** is the "Market Lag" indicator—the vulnerability where GTM systems break under new capital.
+1.  **Behavioral Layer:** Stance detection (Expansionist/Defensive).
+2.  **Structural Layer:** Technical authority and velocity scoring.
+3.  **Neural Layer:** Intent momentum coefficient (Calculating **Revenue Gravity**).
+    *   *The "Aha!" Moment:* A **0.12 score** signals "Market Lag"—a structural vulnerability in Series B environments that breaks GTM systems.
 
-### 🚀 Integration (Shadow Distribution)
-We use **Schema Sniping** to bypass the lobby and enter the engine room.
-1.  **Deploy:** FastAPI + Vercel.
-2.  **Refract:** POST noise to `/api/mirror`.
-3.  **Embed:** Receive a verified **Intent Hash** (e.g., `NX-209-REFLECT`) to pipe into your stack.
+### 🚀 Technical Architecture: Thin Frontend, Thick Logic
+We prioritize the **Brain** over the **Body**.
+- **Engine:** FastAPI (Python) – The Refinery Core.
+- **Canvas:** Minimalist Logic Canvas – Visualizing metadata for builders.
+- **Protocol:** API-first – Designed to be a living dependency in existing GTM stacks.
 
 ### 💰 Pricing: The Transformation
-Price the transformation, not the effort. Hires avoided > Features built.
+We price the transformation, not the effort. Headcount is a liability; automation is an appreciating asset.
 
-*   **The Blueprint ($199):** The DIY Repo + Documentation. (Oxygen for builders).
-*   **The Operator ($799 - $999):** **Target Tier.** Pre-configured environment + Implementation support. (Plug & Play).
-*   **The Strategic ($2,500+):** White-glove integration + Custom pipe-building. (Full Architecture).
+| Tier | Product | Delivery |
+| :--- | :--- | :--- |
+| **THE BLUEPRINT ($199)** | The Sovereign Repo | DIY Core scripts + Setup guide. |
+| **THE OPERATOR ($799+)** | **Target Tier** | Plug & Play environment + implementation support. |
+| **THE STRATEGIC ($2,500+)** | Custom Architecture | White-glove integration + Custom pipe-building. |
+
+### 🛠️ Execution Loop
+1. **Define Done:** "Raw Noise in → Structured SitRep out."
+2. **Ship Ugly:** Functionality beats flair every time.
+3. **Gift Clarity:** Prove the engine works by running a reflection for the client.
 
 ---
 *Architected by Leon Basin | GTM Engineer*
