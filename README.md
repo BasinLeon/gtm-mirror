@@ -1,41 +1,29 @@
 # 🦅 NEXUS::MIRROR
+## The GTM Psychology Primitive & Revenue Intelligence Engine
 
-## The GTM Psychology Primitive & Tri-Vector Intelligence Engine
+NEXUS::MIRROR is not a "tool"—it is **Oxygen**. It is the logic layer designed for **Sovereign Operators** to audit market noise and refine it into a programmable primitive.
 
-NEXUS::MIRROR is not a "tool"—it is a **primitive**. It is the logic layer designed to be integrated into high-status GTM stacks to provide psychological auditing and revenue signal refinement across three intelligence vectors.
+### 🧠 The Refinery (Tri-Vector Hub)
+Stop building dashboards. Start building dependence. The engine processes messy market noise through three intelligence layers:
 
-### 🧠 The Tri-Vector Logic
-Most GTM tools provide *data*. Nexus provides **Reflection**. 
-It processes raw market noise through three refinery layers to output structured metadata:
+1.  **Behavioral Stance:** Detecting if a target is expansionist or defensive.
+2.  **Structural Authority:** Measuring technical velocity and market resonance.
+3.  **Neural Gravity:** Calculating the **Intent Momentum Coefficient**. 
+    *   *Strategic Note:* A **0.12 score** is the "Market Lag" indicator—the vulnerability where GTM systems break under new capital.
 
-1.  **Behavioral Vector (AI):** Detects narrative stance and market posture.
-2.  **Structural Vector (ML):** Assesses technical authority and inbound velocity.
-3.  **Neural Vector (DL):** Calculates "Revenue Gravity" and intent momentum.
+### 🚀 Integration (Shadow Distribution)
+We use **Schema Sniping** to bypass the lobby and enter the engine room.
+1.  **Deploy:** FastAPI + Vercel.
+2.  **Refract:** POST noise to `/api/mirror`.
+3.  **Embed:** Receive a verified **Intent Hash** (e.g., `NX-209-REFLECT`) to pipe into your stack.
 
-### 🛠️ The Operational Hub (GitHub Native)
+### 💰 Pricing: The Transformation
+Price the transformation, not the effort. Hires avoided > Features built.
 
-NEXUS::MIRROR is designed to be run as a **Sovereign Command Center** directly within GitHub.
-
-- **The Operator Console (Codespaces):** Launch a fully pre-configured refinery environment in seconds.
-- **The Playbooks (Actions):** Run high-level GTM audits via "NEXUS::OPS" without touching code.
-- **Security & Governance:** Managed via GitHub Secrets, Private Logs, and Agentic Security Guards.
-
-### 🚀 Integration (Headless UI)
-
-The engine is delivered as a **Headless API**. You build the interface; we provide the brains (JSON Primitive).
-
-1.  **Deploy to Vercel:** (FastAPI + Next.js)
-2.  **Post Noise:** Send a POST request to `/api/mirror`.
-3.  **Receive SitRep:** Get a structured Tri-Vector Situation Report.
-
-### 💰 The "License to Build" Model
-
-This is a one-time payment for the **Engine License**.
-
-*   **The Free Mirror ($0):** Public-facing Tri-Vector audit tool. Proves the logic.
-*   **The Engine License ($500):** Access to the full Python Source + Private API Key for your own builds.
-*   **The Architect Tier ($2k+):** Custom psychological modeling for your specific industry.
+*   **The Blueprint ($199):** The DIY Repo + Documentation. (Oxygen for builders).
+*   **The Operator ($799 - $999):** **Target Tier.** Pre-configured environment + Implementation support. (Plug & Play).
+*   **The Strategic ($2,500+):** White-glove integration + Custom pipe-building. (Full Architecture).
 
 ---
-
-*Built by Leon Basin | GTM Engineer & Architect*
+*Architected by Leon Basin | GTM Engineer*
+*"Revenue is not arithmetic. It is architecture."*

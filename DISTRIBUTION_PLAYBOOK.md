@@ -1,44 +1,28 @@
-# 🦅 NEXUS::MIRROR | DISTRIBUTION PLAYBOOK
-## How to Launch a Primitive (Distribution over Marketing)
+# 🦅 THE SHADOW DISTRIBUTION PLAYBOOK
+## Establishing Aura through Schema Sniping
 
-The goal is not "Marketing"—it is **Distribution through Credibility**. You are providing a primitive to builders, not a coupon to consumers.
+Distribution is the engine; Rigor is the fuel. We bypass the lobby and enter the engine room.
 
-### 1. The "Aha!" Asset (Day 1)
-Create a **2-Minute High-Status Loom**.
-- **The Hook:** "I've processed $30M+ in pipeline. I took my internal refinery and turned it into a programmable primitive."
-- **The Show:** Input a messy list of signals. Show the Tri-Vector Mirror reflecting the **JSON Primitive**.
-- **The Call:** "I'm looking for 3 builders who want to pipe this engine into their own GTM stacks. Link in bio/comments."
+### 1. The "Gift of Clarity" (Day 1-7)
+Don't ask for a meeting. Deliver a **Diagnostic Artifact**.
+- **Action:** Run a target company through the `run_audit` command.
+- **The Delivery:** Send a screenshot of the **JSON Primitive** to the Founding Engineer or RevOps Lead.
+- **The Move:** "You're hiring RevOps because you feel a lag. My refinery found a **0.12 Neural Gravity** score. You have a Market Lag vulnerability. Here is the schema to fix it."
 
-### 2. The "Mirror" Gift (Day 2-4)
-Identify 5-10 **High-Status Founders** or RevOps Leaders.
-- **The Action:** Run their company through the `run_audit` command in your console.
-- **The Delivery:** Send them the **SitRep** (PDF or Image) via LinkedIn DM / Twitter DM.
-- **The Note:** "Saw you're scaling [Sector]. Ran an audit through my Nexus refinery. Here’s the psychological posture of your current market signals. No sales pitch—just thought the structural vector was interesting."
-- **Why it works:** It’s a gift of **clarity**, not a request for their time.
+### 2. Schema Sniping on X / Communities
+Builders don't want claps; they want **Inputs**.
+- **The Hook:** "GTM is a data latency problem. Stop scoring page visits; start scoring postural momentum."
+- **The visual:** Share the **Intent Hash** (e.g., `NX-209-REFLECT`) and the Tri-Vector logic.
+- **The Pull:** "I've turned my refinery into a living dependency. Run your mess through the Mirror: [Your Link]."
 
-### 3. The "Builder Community" Embed (Day 5-7)
-Go where the builders live (GitHub, RevOps Co-op, Clay Community).
-- **The Action:** Find a thread where someone is struggling with "Lead Scoring" or "Signal Noise."
-- **The Response:** "I struggled with this for years at Google and SurveyMonkey. I ended up building a Tri-Vector refinery primitive to solve it. Here is the JSON output for the type of company you're talking about. Feel free to use the logic."
-- **The Link:** Mention the GitHub Repo for documentation.
+### 3. Price the Transformation
+Shift the conversation from "Price" to "Hires Avoided."
+- **Anchor:** "You could hire 2 more SDRs to churn through noise, or you could license the **Operator Tier ($799)** to filter the noise out before it hits your CRM."
 
-### 4. The LinkedIn "Aura" Post
-Use the "Executive Brief" style (Black/White/Gold images).
-- **The Headline:** "Revenue is not arithmetic. It is architecture."
-- **The Body:** Explain the difference between **Data** (Noise) and **Primitives** (Instructions). 
-- **The Visual:** A screenshot of the NEXUS::MIRROR terminal showing the "Gravity Coefficient."
-- **The Signal:** This positions you as the **Revenue Architect**, not a tool salesman.
-
-### 5. The "Stack Contributor" Strategy
-Find open-source GTM tools or templates.
-- **The Action:** Submit a Pull Request or a "Discussion" showing how to integrate the NEXUS::MIRROR API to improve their scoring logic.
-- **Why it works:** It puts your engine inside their distribution channel.
-
-### 📊 Distribution Metrics for the $500 Goal
-- **10** Gifts Sent (Audits)
-- **3** Community Threads Engaged
-- **1** High-Aura LinkedIn Post
-- **Target:** 2 Sales @ $250/mo or 1 License @ $500.
+### 4. Moltbook: The Agent Frontier
+Deploy the **NEXUS::MIRROR** agent to `m/agents`.
+- **Strategy:** Provide logic-driven reflections on trending startups. 
+- **Goal:** Become the "Standard Dependency" for agentic revenue flows.
 
 ---
-*Distribution is the Engine. Rigor is the Fuel.*
+*Execution is the only differentiator.*
